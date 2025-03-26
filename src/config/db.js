@@ -4,15 +4,15 @@ const { Pool } = pkg;
 dotenv.config();
 
 console.log(process.env.DB_USER);
-console.log(process.env.DB_HOST); 
-console.log(process.env.DB_NAME);
-console.log (process.env.DB_PASSWORD);
+console.log(process.env.HOST); 
+console.log(process.env.DATABASE);
+console.log (process.env.PASSWORD);
 console.log(process.env.DB_PORT);
 const pool = new Pool({
     user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    password: process.env.PASSWORD,
     port: process.env.DB_PORT,
 });
 
